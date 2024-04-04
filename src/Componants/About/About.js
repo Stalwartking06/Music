@@ -19,7 +19,7 @@ function Us(){
     <div className={style.body}>
     <section className={style.hero}>
       <div className={style.heading}>
-        <h1>About us</h1>
+        <h1>About Us</h1>
       </div>
       <div className={style.Container}>
         <div className={style.hero_content}>

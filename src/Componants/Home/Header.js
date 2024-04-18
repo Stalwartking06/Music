@@ -1,6 +1,7 @@
 import React from 'react'
 import style from './Header.module.css'
 import { Link } from 'react-router-dom'
+import Logo  from  "./BeatZy.png"
 
 export default function Header() {
   return (
@@ -8,7 +9,9 @@ export default function Header() {
         {/* navbar */}
         <div className={style.navbar}>
             <div className={style.navbar_link_holder}>
-            <div className={style.logo}><b style={{fontSize:"25px",fontWeight:"revert-layer",color:'#FFE4E1'}}>beatZY..!!</b> </div>
+            <div className={style.logo}> <img src={Logo} /> 
+{/* <b style={{fontSize:"25px",fontWeight:"revert-layer",color:'#FFE4E1'}}> beatZY..!!</b> */}
+ </div>
                 {/* ROuting */}
                 <Link to={"/"}>Home</Link>
                 <Link to={"/category"}>Shop by Category</Link>

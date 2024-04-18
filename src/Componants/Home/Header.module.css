@@ -14,7 +14,10 @@ b {
   color: black;
   margin-right: auto;
 }
-
+.logo img{
+  height: 40px;
+  width: 250px;
+  }
 /* Navbar */
 .navbar {
   background-color: #4B0082;

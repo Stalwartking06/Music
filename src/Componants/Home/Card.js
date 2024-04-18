@@ -50,19 +50,17 @@ export default function Card() {
         <button className={style.button}>Buy Now!</button>
     </div>
     {
-      apidata.map((item)=>
-      <div className={style.card}>
-        <h1 className={style.title}></h1>
-        <img src={item.image}  alt="img" className={style.imag}/>
-        {/* <p>{item.id}</p> */}
-        <p>{item.title}</p>
-        {/* <p>{item.description}</p> */}
-        <p>{item.price*85} Rs/-</p>
-
-        {/* <p className="category"></p> */}
-        <p className={style.price}>{item.category}</p>
-        <button className={style.button}>View Product!</button>
-    </div>  )}
+  apidata.map((item, index) => (
+    <div key={index} className={style.card}>
+      <h1 className={style.title}></h1>
+      <img src={item.image} alt="img" className={style.imag}/>
+      <p>{item.title}</p>
+      <p>{item.price * 85} Rs/-</p>
+      <p className={style.price}>{item.category}</p>
+      <button className={style.button}>View Product!</button>
+    </div>
+  ))
+}
 
     </div>
   )

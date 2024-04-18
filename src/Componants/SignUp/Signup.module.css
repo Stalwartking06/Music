@@ -78,7 +78,7 @@ input {
     padding: 0px 20px;
     border: none;
     margin-bottom: 15px; /* Adjust margin for smaller screens */
-    color: white;
+    color: rgb(11, 10, 10);
 }
 .signupbutton {
     background: rgba(45, 126, 231);

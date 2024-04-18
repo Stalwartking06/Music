@@ -1,23 +1,15 @@
 import React, { useState } from 'react';
 import style from './Login.module.css';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export default function Login() {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [passw1, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate(); // Hook for navigation
 
-  function validateEmail(email) {
-    // Basic email validation
-    const re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  }
-
-  function validatePassword(password) {
-    // Password length validation
-    return password.length >= 8;
-  }
-
-  function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!validateEmail(email)) {
@@ -25,29 +17,33 @@ export default function Login() {
       return;
     }
 
-    if (!validatePassword(password)) {
-      setError('Password must be at least 6 characters long.');
+    if (!validatePassword(passw1)) {
+      setError('Password must be at least 8 characters long.');
       return;
     }
 
-    // If validations pass, proceed with login
-    console.log(email, password);
+    try {
+      const response = await axios.post('http://localhost:3001/login', { email, passw1 });
+      console.log(response);
+      if (response.data === "Success") {
+        navigate('/');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setError('Failed to log in');
+    }
+  };
 
-    const data = { email, password };
+  const validateEmail = (email) => {
+    // Basic email validation
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  };
 
-    fetch("http://localhost:3002/posts", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    }).then((result) => {
-      result.json().then((data1) => {
-        console.log(data1);
-      });
-    });
-  }
+  const validatePassword = (passw1) => {
+    // Password length validation
+    return passw1.length >= 8;
+  };
 
   return (
     <div className={style.A}>
@@ -55,10 +51,11 @@ export default function Login() {
         <form onSubmit={handleSubmit}>
           <h1>beatZY..!!</h1>
           <h2>Log In</h2>
+          <label>{error}</label>
           <label>Email</label>
           <input type="email" placeholder="Enter Email" value={email} onChange={(e) => setEmail(e.target.value)} />
           <label>Password</label>
-          <input type="password" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input type="password" placeholder="Enter Password" value={passw1} onChange={(e) => setPassword(e.target.value)} />
           {error && <p className={style.error}>{error}</p>}
           <button>Login</button>
         </form>

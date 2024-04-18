@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import style from './Signup.module.css';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function SignUpPage() {
+    const [id, setId] = useState('');
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [passw1, setPassw1] = useState('');
     const [passw2, setPassw2] = useState('');
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate(); // Hook for navigation
 
-    function handleSubmit(e) {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         // Email validation
@@ -40,20 +44,29 @@ export default function SignUpPage() {
         }
 
         const phone1 = parseInt(phone);
-        const data = { name, email, phone1, passw1, passw2 };
-
-        fetch("http://localhost:3002/posts", {
-            method: "POST",
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(data)
-        }).then((result) => {
-            result.json().then((data1) => {
-                console.log(data1);
+        try {
+            const response = await fetch('http://localhost:3001/Signup', { // Update endpoint to '/Loggin'
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({ id,name, phone1,passw1, passw2,email }),
             });
-        });
+            const data = await response.json();
+            alert(data.message);
+            // Clear form fields after successful submission
+            setId('')
+            setName('');
+            setPhone('')
+            setPassw1('')
+            setPassw2('')
+            setEmail('')
+            navigate('/login'); // Assuming '/home' is the route for the home page
+
+          } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to add item');
+          }
     }
 
     return (
@@ -64,13 +77,15 @@ export default function SignUpPage() {
                         <h1>beatZY..!!</h1>
                         <h2>Sign up</h2>
                         {error && <div className={style.error}>{error}</div>}
+                        <label>Id No.</label>
+                        <input type="number" placeholder="Enter Phone Number" value={id} onChange={(e) => setId(e.target.value)} />
                         <label>Name</label>
                         <input type="text" placeholder="Enter Full Name" value={name} onChange={(e) => setName(e.target.value)} />
                         <label>Email</label>
                         <input type="email" placeholder="Enter Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                         <label>Phone No.</label>
-                        <input type="tel" placeholder="Enter Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                        <label>Password</label>
+                        <input type="number" placeholder="Enter Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                        <label>Create Password</label>
                         <input type="password" placeholder="Enter Password" value={passw1} onChange={(e) => setPassw1(e.target.value)} />
                         <label>Confirm Password</label>
                         <input type="password" placeholder="Confirm Password" value={passw2} onChange={(e) => setPassw2(e.target.value)} />

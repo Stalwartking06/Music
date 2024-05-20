@@ -7,6 +7,7 @@ export default function App() {
   return (
     <div>
       <RoutingM></RoutingM>
+      {/* <CartPage/> */}
     </div>
   )
 }

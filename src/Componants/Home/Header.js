@@ -15,7 +15,7 @@ export default function Header() {
                 {/* ROuting */}
                 <Link to={"/"}>Home</Link>
                 <Link to={"/category"}>Shop by Category</Link>
-                <Link to={"/shopbyBrand"}>Shop by Brand</Link>
+                {/* <Link to={"/shopbyBrand"}>Shop by Brand</Link> */}
                 <Link to={"/service"}>Service</Link>
                 <Link to={"/about"}>About</Link>
                 <Link to={"/signup"}><i className="fa fa-lock"></i>  Sign up</Link>

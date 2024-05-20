@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react'
 // import './Card.css'
 import style from './HomeCard.module.css'
+import { useNavigate } from 'react-router-dom'
 export default function Card() {
   const [apidata,setapidata]=useState([])
+  const navigate = useNavigate()
+
   useEffect(()=>
   {
   fetch("https://fakestoreapi.com/products").then((result)=>
@@ -12,6 +15,12 @@ export default function Card() {
   })
 })
 },[])
+function getId(pid){
+  const data={pid:pid,add:"indore"}
+  // console.log(pid)
+  navigate("/item",{state:data});
+
+}
 
   return (
     <div className={style.cards}>
@@ -57,7 +66,7 @@ export default function Card() {
       <p>{item.title}</p>
       <p>{item.price * 85} Rs/-</p>
       <p className={style.price}>{item.category}</p>
-      <button className={style.button}>View Product!</button>
+      <button className={style.button} onClick={()=>getId(item.id)}>View Product!</button>
     </div>
   ))
 }

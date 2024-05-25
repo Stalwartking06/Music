@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 
 
 export default function SignUpPage() {
-    const [id, setId] = useState('');
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [passw1, setPassw1] = useState('');
@@ -50,12 +49,11 @@ export default function SignUpPage() {
               headers: {
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify({ id,name, phone1,passw1, passw2,email }),
+              body: JSON.stringify({name, phone1,passw1, passw2,email }),
             });
             const data = await response.json();
             alert(data.message);
             // Clear form fields after successful submission
-            setId('')
             setName('');
             setPhone('')
             setPassw1('')
@@ -77,8 +75,6 @@ export default function SignUpPage() {
                         <h1>beatZY..!!</h1>
                         <h2>Sign up</h2>
                         {error && <div className={style.error}>{error}</div>}
-                        <label>Id No.</label>
-                        <input type="number" placeholder="Enter Phone Number" value={id} onChange={(e) => setId(e.target.value)} />
                         <label>Name</label>
                         <input type="text" placeholder="Enter Full Name" value={name} onChange={(e) => setName(e.target.value)} />
                         <label>Email</label>

@@ -49,7 +49,7 @@ export default function Login() {
     <div className={style.A}>
       <div className={style.login}>
         <form onSubmit={handleSubmit}>
-          <h1>beatZY..!!</h1>
+          {/* <h1>beatZY..!!</h1> */}
           <h2>Log In</h2>
           <label>{error}</label>
           <label>Email</label>

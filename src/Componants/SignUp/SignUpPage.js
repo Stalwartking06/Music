@@ -72,7 +72,7 @@ export default function SignUpPage() {
             <div className={style.A}>
                 <div className={style.login}>
                     <form onSubmit={handleSubmit}>
-                        <h1>beatZY..!!</h1>
+                        {/* <h1>beatZY..!!</h1> */}
                         <h2>Sign up</h2>
                         {error && <div className={style.error}>{error}</div>}
                         <label>Name</label>

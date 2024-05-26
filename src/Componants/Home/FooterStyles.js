@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Box = styled.div`
 padding: 80px 60px;
-background: #293991;
+background: #2656ae;
 position: bottom;
 bottom: 0;
 // font-family: "Pacifico", cursive;
@@ -52,7 +52,7 @@ font-size: 18px;
 text-decoration: none;
 
 &:hover {
-	color: red;
+	color: black;
 	transition: 200ms ease-in;
 }
 `;

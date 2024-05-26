@@ -18,11 +18,11 @@ b {
 }
 .logo img{
   height: 40px;
-  width: 250px;
+  width: 100px;
   }
 /* Navbar */
 .navbar {
-  background-color: #4B0082;
+  background-color: #2656ae;
   /* background-color: #293991; */
   padding: 10px;
 }

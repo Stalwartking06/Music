@@ -6,7 +6,7 @@
 }
 
 .cards {
-    background-color: #ddd;
+    background-color: white;
     justify-content: space-around;
     flex-wrap: wrap;
     display: flex;
@@ -17,18 +17,21 @@
 
 .card {
     width: 23%;
-    box-shadow: 0 0 4px 3px pink;
+    /* box-shadow: 0 0 2px 2px #2656ae; */
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2), 2px 3px 5px 0 rgba(0, 0, 0, 0.5);
     text-align: center;
     padding: 1.5em;
     margin-bottom: 2em;
+    border-radius: 5%;
 }
-.card:hover{
+/* .card:hover{
     transform: scale(1.10);
 
-}
+} */
 
 .imag {
     width: 80%;
+    height: 200px;
     animation: fadeInUp 2s ease;
 
 }
@@ -38,7 +41,9 @@
 }
 
 .title {
-    font-size: 1.3rem;
+    height: 60px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .category,
@@ -46,16 +51,19 @@
     font-weight: bold;
     text-transform: capitalize;
     margin: 1em;
-    font-size: 1.2rem;
+    font-size: 13px;
 }
 
 .button{
-    background-color: black;
+    padding: 7px 15px;
+    background-color: #2656ae;
+    box-shadow: 0 2px 0 0 hsla(219, 64%, 42%, 0.5), 2px 3px 3px 0 hsla(219, 64%, 42%, 0.5);
     color: #fff;
+    border-color: #2656ae;
     border-radius: 25px;
+    font-size: 13px;
 }
 .button:hover{
-    background-color: orange;
     color: #fff;
     border-radius: 25px;
     transform: scale(1.1);

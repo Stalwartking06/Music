@@ -2,8 +2,8 @@
 
 
 .A{
-    background: url('Login1.jpg ');
-    height: 600px;
+    /* background: url('Login1.jpg '); */
+    height: 100vh;
     display: flex;
     justify-content: center;
     backdrop-filter: brightness(80%);
@@ -29,7 +29,7 @@
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    margin: 40px auto; /* Center horizontally */
+    margin: 25px auto; /* Center horizontally */
     animation: fadeInRight 2s ease
 
 
@@ -48,29 +48,29 @@ form {
 
 h1 {
     font-family: "Pacifico", cursive;
-
     font-weight: normal;
     font-size: 24px;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
     margin-bottom: 30px; /* Adjust margin for smaller screens */
 }
-
-h2 {
+.login h2{
+    margin: 30px;
     font-weight: normal;
     font-size: 24px;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-    margin-bottom: 30px; /* Adjust margin for smaller screens */
+    margin-bottom: 60px; /* Adjust margin for smaller screens */
 }
 
-label {
+.login label {
     color: rgba(255, 255, 255, 0.8);
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 1px; /* Adjust letter spacing for smaller screens */
     padding-left: 5px; /* Adjust padding for smaller screens */
+    margin-bottom: 10px;
 }
 
-input {
+.login input {
     background: rgba(255, 255, 255, 0.5);
     height: 40px;
     line-height: 40px;
@@ -78,14 +78,16 @@ input {
     padding: 0px 20px;
     border: none;
     margin-bottom: 15px; /* Adjust margin for smaller screens */
-    color: white;
+    color: black !important;
+   
 }
 
-button {
+.login button {
     background: rgba(45, 126, 231);
-    border: 1px solid rgb(190, 12, 12);
+    border: 1px solid  rgba(45, 126, 231);
+    border-radius: 15px;
     padding: 10px 20px; /* Add padding for better touch experience on mobile */
-    margin-top: 15px; /* Adjust margin for smaller screens */
+    margin-top: 20px; /* Adjust margin for smaller screens */
 }
 
 @keyframes fadeInUp {

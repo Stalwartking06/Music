@@ -12,7 +12,7 @@
 }
 
 .service_wrapper{
-    padding: 5% 8%;
+    padding: 0 8%;
 }
 
 .service{
@@ -117,7 +117,9 @@
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
+    color: #72e2ae;
 }
+
 .card .pa{
     text-align: center;
     width: 100%;

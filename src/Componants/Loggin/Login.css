@@ -2,8 +2,8 @@
 
 
 .A{
-    background: url('Login1.jpg ');
-    height: 600px;
+    /* background: url('Login1.jpg '); */
+    /* height: 400px; */
     display: flex;
     justify-content: center;
     backdrop-filter: brightness(80%);
@@ -21,7 +21,7 @@
     border: 1px solid black;
     width: 90%; /* Use percentage for responsiveness */
     max-width: 400px; /* Set maximum width */
-    height: 500px; /* Adjust height automatically */
+    height: 450px; /* Adjust height automatically */
     background: url('login22.jpg');
     color: white;
     border-radius: 20px;
@@ -29,7 +29,7 @@
     background-size: cover;
     background-position: center;
     overflow: hidden;
-    margin: 40px auto; /* Center horizontally */
+    margin: 25px auto; /* Center horizontally */
     animation: fadeInRight 2s ease
 
 

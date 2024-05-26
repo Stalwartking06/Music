@@ -12,9 +12,10 @@ Heading,
 const Footer = () => {
 return (
 	<Box className="navimg"> 
-	<h1 style={{ color: "#ff6b81",
+	<h1 style={{ color: "black",
 				textAlign: "center",
 				marginTop: "-50px" ,
+				marginBottom: "25px",
 				  fontFamily: "Pacifico, cursive"
 			}} >beatZY!!	</h1>
 	<Container >
@@ -74,6 +75,7 @@ return (
 	</Container>
 	<h3 style={{ color: "white",
 				textAlign: "center",
+				fontSize: "15px",
 				marginTop: "" }}>
                     <a href="https://www.flipkart.com/"> helpdesk@beatZY.com.</a>
 	</h3>

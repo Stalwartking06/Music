@@ -37,6 +37,7 @@ function View() {
 
   const [amount, setAmount] = useState(1);
 
+
   if (!apidata) {
     return <p>Loading...</p>;
   }
@@ -44,7 +45,7 @@ function View() {
   return (
     <div>
       <Header />
-      <div className='flex flex-col justify-between lg:flex-row gap-16 lg:items-center'>
+      <div className='flex flex-col justify-between lg:flex-row gap-8 lg:items-center'>
         <div className='flex flex-col gap-6 lg:w-2/4'>
           <img src={apidata.pimage} alt="" className='w-full h-full aspect-square object-cover rounded-xl' style={{ height: "100%", width: "80%" }} />
         </div>
@@ -52,16 +53,16 @@ function View() {
           <div>
             <span className='text-violet-600 font-semibold'>Special Offer</span>
           </div>
-          <h6 className='text-2xl font-semibold' >Price : {apidata.name} Rs/-</h6>
+          <h6 className='text-1xl font-semibold' > {apidata.name}</h6>
           <p className='text-gray-700'>{apidata.description}</p>
-          <h6 className='text-2xl font-semibold' style={{ backgroundColor: "#00FF7F" }}>  {apidata.price} Rs/-</h6>
+          <h6 className='text-2l font-semibold'>Price :  {apidata.price} Rs/-</h6>
           <div className='flex flex-row items-center gap-12'>
             <div className='flex flex-row items-center'>
               <button className='bg-gray-200 py-1 px-2 rounded-lg text-violet-800 text-3xl' onClick={() => setAmount((prev) => Math.max(1, prev - 1))}>-</button>
               <span className='py-4 px-6 rounded-lg'>{amount}</span>
               <button className='bg-gray-200 py-1 px-1 rounded-lg text-violet-800 text-3xl' onClick={() => setAmount((prev) => prev + 1)}>+</button>
             </div>
-            <button className='bg-violet-800 text-white font-semibold py-3 px-16 rounded-xl h-full'>Add to Cart</button>
+            <button className='bg-violet-800 text-white font-semibold py-3 px-16 rounded-xl h-full' >Add to Cart</button>
           </div>
         </div>
       </div>

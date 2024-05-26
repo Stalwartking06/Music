@@ -11,12 +11,11 @@
 }
 
 .heading h1{
-    font-family: Arial, Helvetica, sans-serif;
-
-    color: #ff6347;
+    font-family: 'Times New Roman', Times, serif;
+    color: #2656ae;
     font-size: 55px;
     text-align: center;
-    margin-top: 35px;
+    margin-top: 10px;
 }
 
 .Container{
@@ -24,7 +23,7 @@
     justify-content: center;
     align-items: center;
     width: 90%;
-    margin: 5% auto;
+    margin: 3% auto;
 }
 
 .hero_content{
@@ -36,6 +35,7 @@
 }
 .hero_content h2{
     font-size: 38px;
+    margin-top: -250px;
     margin-bottom: 20px;
     color: #333;
 }
@@ -49,7 +49,7 @@
 
 .hero_content button{
     display: inline-block;
-    background-color: #ff4500;
+    background-color: #2656ae;
     color: #fff;
     padding: 12px 24px;
     border-radius: 5px;
@@ -60,7 +60,6 @@
 }
 
 .hero_content button:hover{
-    background-color: #ff6347;
     transform: scale(1.1);
 }
 
@@ -95,7 +94,7 @@ img{
     }
     .hero_content{
         width: 100%;
-        margin: 35px 0px;
+        /* margin: 35px 0px; */
     }
     .hero_content h2{
         font-size: 30px;

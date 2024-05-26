@@ -23,6 +23,7 @@ export default function RoutingM() {
                 <Route path='/signup' element={<SignUpPage/>}></Route>
                 <Route path='/login' element={<Loggin/>}></Route>
 
+
             </Routes>
       </BrowserRouter>
     </div>

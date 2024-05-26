@@ -23,11 +23,7 @@ function Us(){
       </div>
       <div className={style.Container}>
         <div className={style.hero_content}>
-          <h2>Welcome to <p style={{color: "black",
-				textAlign: "center",
-				marginTop: "-40px" ,
-        fontSize:"30px",
-				  fontFamily: "Pacifico, cursive"}}>  beatZY..!!</p></h2>
+          <h2>Welcome to <span style={{color: "#2656ae", fontFamily: "Pacifico, cursive"}}> beatZY..!!</span> </h2>
           <p>Welcome to BeatZY - Where the Rhythm Finds You</p>
           <p>At BeatZY, we are more than just an e-commerce platform for musical instruments; we are the symphony of your aspirations, the melody of your creativity, and the beat of your passion. Our mission is to resonate with musicians of all levels, from beginners to virtuosos, by providing a harmonious blend of quality products, expert guidance, and a community that celebrates the love for music.</p>
           <p>Founded by a team of music enthusiasts, BeatZY was born out of the belief that every individual deserves access to instruments that inspire and empower their musical journey. Whether you're strumming chords on a guitar, pounding rhythms on drums, or exploring the nuances of a keyboard, we're here to accompany you every step of the way.</p>

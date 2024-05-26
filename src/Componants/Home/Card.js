@@ -29,9 +29,9 @@ export default function Card() {
       {apidata.map((item, index) => (
         <div key={index} className={style.card}>
           <img src={item.pimage} alt="img" className={style.imag} />
-          <p>{item.name}</p>
-          <p>{item.price} Rs/-</p>
-          <p className={style.price}>{item.category}</p>
+          <p className={style.title}>{item.name}</p>
+          <p className={style.price}>Price : {item.price} Rs/-</p>
+          {/* <p className={style.price}>{item.category}</p> */}
           <button className={style.button} onClick={() => getId(item.p_id)}>View Product!</button>
         </div>
       ))}

@@ -18,10 +18,8 @@ export default function Card() {
       });
   }, []);
 
-  function getId(p_id) {
-    const data = { p_id: p_id, add: "indore" };
-    console.log("Navigating with data:", data); // Debugging line
-    navigate("/item", { state: data });
+  function getId(product) {
+    navigate("/item", { state: { product } });
   }
 
   return (
@@ -31,8 +29,7 @@ export default function Card() {
           <img src={item.pimage} alt="img" className={style.imag} />
           <p className={style.title}>{item.name}</p>
           <p className={style.price}>Price : {item.price} Rs/-</p>
-          {/* <p className={style.price}>{item.category}</p> */}
-          <button className={style.button} onClick={() => getId(item.p_id)}>View Product!</button>
+          <button className={style.button} onClick={() => getId(item)}>View Product!</button>
         </div>
       ))}
     </div>

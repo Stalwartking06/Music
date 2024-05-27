@@ -18,7 +18,7 @@ export default function Header() {
                 {/* <Link to={"/shopbyBrand"}>Shop by Brand</Link> */}
                 <Link to={"/service"}>Service</Link>
                 <Link to={"/about"}>About</Link>
-                <Link to="/cart" className="text-white hover:text-gray-300">Cart</Link>
+                <Link to="/cart" className="fa fa-shopping-cart text-white hover:text-gray-300 "></Link>
                 <Link to={"/signup"}><i className="fa fa-lock"></i>  Sign up</Link>
                 <Link to={"/login"}><i className="fa fa-user"></i>  Login</Link>
             </div>
